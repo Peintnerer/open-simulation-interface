@@ -30,11 +30,11 @@ message MotionRequest
     //
     optional Timestamp timestamp = 2;
 
-    // Define the option that is used to specify the motion request.
+    // Define the type that is used to specify the motion request.
     // This must be set. Additionally, the field corresponding to the specified 
     // option must be set.
     //
-    optional OutputOption output_option = 3;
+    optional MotionRequestType motion_request_type = 3;
 
     // Defines a desired state.
     // If the output option is set to DESIRED_STATE, this field must be set.
@@ -49,7 +49,7 @@ message MotionRequest
     // Define different options for HAD function output.
     // Each option corresponds to a field in the message.
     //
-    enum OutputOption
+    enum MotionRequestType
     {
         // Desired state calculated by the HAD function.
         //
